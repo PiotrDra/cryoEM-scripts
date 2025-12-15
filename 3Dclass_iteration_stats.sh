@@ -3,9 +3,9 @@
 # by Piotr Draczkowski 2021-03-23
 
 
-echo 'This script will report per class statistics after a given iteration of a classification job eg. iteration 007 Or from all the iterationsc'
+echo 'This script will report per-class statistics after a given iteration of a classification job, eg, iteration 007 or from all the iterations'
 echo ' '
-echo 'IMPORTANT: This script should be executed from the Relion project directory (i.e. from which you execute relion command)'
+echo 'IMPORTANT: This script should be executed from the Relion project directory (i.e. from which you execute the relion command)'
 echo ' '
 echo 'specify job number (example: 045)'
 read job_no
@@ -15,7 +15,7 @@ read it_no
 
 if [ -z "$it_no"]
 then
-	#run relion_star_printtable.py for all *model.star in the job directory ie. show stats from all the iterations
+	#run relion_star_printtable.py for all *model. star in the job directory, ie, show stats from all the iterations
 	for i in Class3D/job${job_no}/*model.star
 	do
 	echo ' '
@@ -28,13 +28,13 @@ then
 	echo 'Changes in the particles class assignment over the course of the classification'
 	grep rlnChangesOptimalClasses Class3D/job${job_no}/*optimiser.star
 	echo ' '	
-	echo 'Changes in the particles orientations over the course of the classification'
+	echo 'Changes in the particle orientations over the course of the classification'
 	grep rlnChangesOptimalOrientations Class3D/job${job_no}/*optimiser.star
 	echo ' '
 	echo 'Changes in the particles X/Y translations over the course of the classification'
 	grep rlnChangesOptimalOffsets Class3D/job${job_no}/*optimiser.star
 else
-	#run relion_star_printtable.py with the user inputted iteration number
+	#run relion_star_printtable.py with the user-inputted iteration number
 	echo ' '
 	echo 'per class statistics in '$it_no
 	echo '#1 class name #2 ClassDistribution #3 EstimatedResolution'
