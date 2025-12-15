@@ -4,9 +4,9 @@ This is a set of small utility scripts that make cryo-EM data processing easier 
 
 The scripts are designed to be:
 
-Lightweight
-Safe and non-destructive
-Easy to run from standard RELION directory layouts
+Lightweight\
+Safe and non-destructive\
+Easy to run from standard RELION directory layouts\
 
 ***add_jobNo_to_Rln_jobMaps.sh***
 
